@@ -33,7 +33,27 @@ jobs:
         run: gradle wrapper --gradle-version 8.6
 
       - name: Compilar APK de debug
+        id: build
+        continue-on-error: true
         run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: "DIAGNÓSTICO: mostrar o conteúdo real que o Gradle mesclou"
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "===================== activity_main.xml (mesclado) ====================="
+          find app/build -name "activity_main.xml" -exec echo ">>> {}" \; -exec cat {} \;
+          echo "===================== activity_add_edit_materia.xml (mesclado) ====================="
+          find app/build -name "activity_add_edit_materia.xml" -exec echo ">>> {}" \; -exec cat {} \;
+          echo "===================== item_materia.xml (mesclado, para comparar) ====================="
+          find app/build -name "item_materia.xml" -exec echo ">>> {}" \; -exec cat {} \;
+          echo "===================== Buscando qualquer attrs.xml customizado no projeto ====================="
+          find app/src -name "attrs.xml" -exec echo ">>> {}" \; -exec cat {} \;
+          echo "===================== Conteúdo da pasta values/ enviada ====================="
+          ls -la app/src/main/res/values/
+
+      - name: Encerrar com erro se a compilação falhou
+        if: steps.build.outcome == 'failure'
+        run: exit 1
 
       - name: Disponibilizar o APK gerado para download
         uses: actions/upload-artifact@v4
