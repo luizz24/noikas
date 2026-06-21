@@ -26,8 +26,11 @@ jobs:
           gradle-version: '8.4'
           cache-disabled: true
 
+      - name: Diagnóstico - mostrar dependências resolvidas
+        run: gradle :app:dependencies --configuration debugRuntimeClasspath --no-daemon
+
       - name: Compilar APK de debug
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Disponibilizar o APK gerado para download
         uses: actions/upload-artifact@v4
