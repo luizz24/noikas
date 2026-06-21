@@ -26,6 +26,9 @@ jobs:
           gradle-version: '8.6'
           cache-disabled: true
 
+      - name: Remover local.properties (específico de máquina, não deve estar no repositório)
+        run: rm -f local.properties
+
       - name: Gerar o Gradle Wrapper oficial do projeto
         run: gradle wrapper --gradle-version 8.6
 
