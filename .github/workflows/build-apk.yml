@@ -23,11 +23,11 @@ jobs:
       - name: Configurar Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.4'
+          gradle-version: '8.6'
           cache-disabled: true
 
       - name: Gerar o Gradle Wrapper oficial do projeto
-        run: gradle wrapper --gradle-version 8.4
+        run: gradle wrapper --gradle-version 8.6
 
       - name: Compilar APK de debug
         run: ./gradlew assembleDebug --no-daemon --stacktrace
