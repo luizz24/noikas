@@ -26,11 +26,11 @@ jobs:
           gradle-version: '8.4'
           cache-disabled: true
 
-      - name: Diagnóstico - mostrar dependências resolvidas
-        run: gradle :app:dependencies --configuration debugRuntimeClasspath --no-daemon
+      - name: Gerar o Gradle Wrapper oficial do projeto
+        run: gradle wrapper --gradle-version 8.4
 
       - name: Compilar APK de debug
-        run: gradle assembleDebug --no-daemon --stacktrace
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Disponibilizar o APK gerado para download
         uses: actions/upload-artifact@v4
