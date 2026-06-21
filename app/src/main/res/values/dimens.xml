@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos padrão para telefones. A pasta values-sw600dp/
+         sobrescreve estes valores em tablets, deixando a interface
+         proporcional em telas maiores. -->
+    <dimen name="spacing_xsmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">80dp</dimen>
+</resources>

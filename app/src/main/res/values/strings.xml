@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Média Escolar</string>
+
+    <!-- Tela principal -->
+    <string name="adicionar_materia">Adicionar matéria</string>
+    <string name="lista_vazia">Nenhuma matéria cadastrada.\nToque no botão + para adicionar.</string>
+    <string name="editar">Editar</string>
+    <string name="remover">Remover</string>
+    <string name="confirmar_remocao_titulo">Remover matéria</string>
+    <string name="confirmar_remocao_mensagem">Tem certeza que deseja remover \"%1$s\"? Esta ação não pode ser desfeita.</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- Formatação de resultados (soma, média, notas) -->
+    <string name="formato_notas">Notas: %1$.2f, %2$.2f, %3$.2f</string>
+    <string name="formato_soma">Soma: %1$.2f</string>
+    <string name="formato_media">Média: %1$.2f</string>
+    <string name="aprovado">Aprovado</string>
+    <string name="formato_reprovado">Reprovado — faltam %1$.2f pontos para a média</string>
+    <string name="preencha_as_notas">Preencha as 3 notas para calcular o resultado</string>
+
+    <!-- Tela de adicionar/editar matéria -->
+    <string name="nova_materia">Nova Matéria</string>
+    <string name="editar_materia">Editar Matéria</string>
+    <string name="nome_da_materia">Nome da matéria</string>
+    <string name="nota_1">Nota 1</string>
+    <string name="nota_2">Nota 2</string>
+    <string name="nota_3">Nota 3</string>
+    <string name="resultado">Resultado</string>
+    <string name="salvar">Salvar</string>
+
+    <!-- Mensagens de validação -->
+    <string name="erro_nome_vazio">Informe o nome da matéria</string>
+    <string name="erro_nota_vazia">Informe a nota</string>
+    <string name="erro_nota_invalida">Valor inválido</string>
+    <string name="erro_nota_fora_intervalo">A nota deve estar entre 0 e 10</string>
+</resources>

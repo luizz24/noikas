@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta do tema escuro roxo/preto usada em todo o aplicativo -->
+    <color name="background_black">#0D0410</color>   <!-- fundo das telas -->
+    <color name="surface_dark">#1A0F22</color>        <!-- cards e cabeçalho -->
+    <color name="purple_primary">#9C27B0</color>      <!-- cor de destaque principal -->
+    <color name="purple_dark">#6A1B7A</color>         <!-- bordas e detalhes -->
+    <color name="purple_light">#CE93D8</color>        <!-- títulos e textos de destaque -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_light">#CFCFCF</color>          <!-- texto secundário -->
+    <color name="gray_neutro">#9E9E9E</color>         <!-- texto neutro/desabilitado -->
+    <color name="green_aprovado">#4CAF50</color>      <!-- situação: aprovado -->
+    <color name="red_reprovado">#FF5252</color>       <!-- situação: reprovado / remover -->
+</resources>

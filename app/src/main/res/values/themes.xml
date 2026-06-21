@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base do aplicativo: escuro, com roxo como cor de destaque.
+         Sem ActionBar do sistema: cada tela desenha seu próprio
+         cabeçalho dentro do layout, para ter controle total do visual. -->
+    <style name="Theme.MediaEscolar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorPrimaryDark">@color/background_black</item>
+        <item name="colorAccent">@color/purple_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/background_black</item>
+        <item name="android:statusBarColor">@color/background_black</item>
+        <item name="android:navigationBarColor">@color/background_black</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/gray_neutro</item>
+    </style>
+</resources>

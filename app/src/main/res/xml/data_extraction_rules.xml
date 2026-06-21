@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Regras de backup/transferência de dados para Android 12+ -->
+<data-extraction-rules>
+    <cloud-backup>
+    </cloud-backup>
+</data-extraction-rules>

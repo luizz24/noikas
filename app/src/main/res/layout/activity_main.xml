@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/app"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_black">
+
+    <!-- Cabeçalho simples com o nome do app -->
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_dark"
+        android:paddingStart="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_large"
+        android:paddingEnd="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:text="@string/app_name"
+        android:textColor="@color/purple_light"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Mensagem exibida somente quando não há nenhuma matéria cadastrada -->
+    <TextView
+        android:id="@+id/textViewListaVazia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/spacing_large"
+        android:text="@string/lista_vazia"
+        android:textColor="@color/gray_neutro"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeader"
+        tools:visibility="visible" />
+
+    <!-- Lista de matérias cadastradas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMaterias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeader"
+        tools:listitem="@layout/item_materia" />
+
+    <!-- Botão flutuante para adicionar uma nova matéria -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_large"
+        android:contentDescription="@string/adicionar_materia"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/purple_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
