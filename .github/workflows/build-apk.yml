@@ -22,6 +22,8 @@ jobs:
 
       - name: Configurar Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.4'
 
       - name: Compilar APK de debug
         run: gradle assembleDebug --no-daemon
